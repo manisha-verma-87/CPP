@@ -1,0 +1,74 @@
+Basic OOPs features
+
+1. Inheritance
+2. Polymorphism
+3. Encapsulation
+4. Abstraction
+
+
+
+INHERITANCE
+-----------
+The capability of a class to derive the proprties of another class is called inheritance.
+
+Types of inheritance in C++
+---------------------------
+
+1. Single inheritance: A class is allowed to inherit properties from only one class.
+   ------------------
+   
+   +------------+
+   |  class A   |  Base class
+   +------------+
+         |
+         |
+         V
+   +------------+
+   |  class B   |  Derived class
+   +------------+
+   
+   
+  2. Multiple Inheritance: - A class caninherit from more than one classes
+     ---------------------
+  
+   +---------+             +---------+ 
+   | class A |             | class B |  
+   +---------+             +---------+
+            \                /
+             \              /
+              \            /
+               V          V
+              +------------+
+              |  class C   |  Derived class
+              +------------+
+ 
+ 
+class C : access_mode A, access_mode B
+{
+  //body of C
+};
+ 
+ 
+ 
+ 3. Multilevel Inheritance : A class can derive from another derived class.
+    -----------------------
+    
+   +------------+
+   |  class A   |  
+   +------------+
+         |
+         |
+         V
+   +------------+
+   |  class B   |  
+   +------------+
+         |
+         |
+         V
+   +------------+
+   |  class C   |  
+   +------------+
+    
+    
+ 
+
