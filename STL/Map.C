@@ -4,8 +4,16 @@ using namespace std;
 
 
 //
-// Map is internally inplemented as a balanced binary search tree (AVL/Red black tree)
+// Map is internally inplemented as a self-balancing red-black tree.
 //
+// AVL tree and Red black tree are most common self-balancing binary search tree.
+// 
+// insert/delete operations oin both trees are O(log n) complexity.
+// In the case of Red-Black tree re-balancing rotation is an O(1) operation 
+// while with AVL this is a O(log n) operation
+//
+// Since re-balancing of Red-black tree is O(1), it is preferred over AVL tree.
+// 
 // complexity of searching an element is O(log(n))
 //
 //
