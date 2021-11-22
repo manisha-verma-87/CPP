@@ -22,8 +22,13 @@ using namespace std;
 // end()
 // size()
 // max_size()
+// count() => can be used to check the presence of any key
+// if (mymap.count("abc") > 0)
+//     cout << "element with key abc is present";
+// else cout << "not present";
 //
 //
+// ** 
 
 int main()
 {
