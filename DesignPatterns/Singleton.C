@@ -1,38 +1,37 @@
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Singleton
 {
     private:
         Singleton(){}
-        int x;
-
+        static Singleton* instance;
+        
     public:
-        static Singleton& getInstance()
+        static Singleton* getInstance()
         {
-            static Singleton instance;
+            if (instance == NULL){
+                instance = new Singleton();
+            }
+            
             return instance;
         }
 
         Singleton(const Singleton &instance) = delete;
         Singleton operator = (const Singleton &instance)  = delete;
-
-        void set_x(int y) 
-        {
-            x=y;
-        }
-        void print_x()
-        {  
-           cout << x << endl;
+        
+        void printClassDesription() const {
+            cout << "I am a singleton class" << endl;
         }
 };
 
+Singleton* Singleton::instance = NULL;
+
 int main()
 {
-    Singleton::getInstance().set_x(8);
-    Singleton::getInstance().print_x();
-
+    Singleton::getInstance()->printClassDesription();
+    
     return 0;    
 }
-
 
