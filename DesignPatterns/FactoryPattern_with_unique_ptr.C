@@ -36,14 +36,9 @@ public:
    Scooter():Vehicle(2, "scooter"){}
 };
 
-auto del = [](Vehicle *v){
-    cout << "deleting the vehicle " << v->getname() << endl;
-    delete v;
-};
-
-unique_ptr<Vehicle, decltype(del)> getVehicle(int type)
+unique_ptr<Vehicle> getVehicle(int type)
 {
-    unique_ptr<Vehicle, decltype(del)> ptr1(nullptr, del);
+    unique_ptr<Vehicle> ptr1(nullptr);
     switch(type){
         case 0:
             ptr1.reset(new Car);
